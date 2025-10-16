@@ -3,6 +3,7 @@ local M = {}
 function M.setup()
   -- Configurações básicas que não dependem de plugins
   require('config.setups.nvim-tree').setup()
+  require('config.setups.bufferline').setup()
   require('config.setups.lualine').setup()
   require('config.setups.gitsigns').setup()
   require('config.setups.autopairs').setup()
@@ -14,11 +15,11 @@ function M.setup()
   require('config.setups.comment').setup()
   require('config.setups.conform').setup()
   require('config.setups.codecompanion').setup()
-  
+
   -- LSP e autocompletion
   require('config.setups.lsp').setup()
   require('config.setups.cmp').setup()
-  
+
   -- Debug
   require('config.setups.dap').setup()
 end

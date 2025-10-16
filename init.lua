@@ -51,6 +51,7 @@ require('packer').startup(function(use)
   use("nvim-telescope/telescope.nvim")
   use("nvim-lua/plenary.nvim")
   use("stevearc/conform.nvim")
+  use("akinsho/bufferline.nvim")
 
   use 'mfussenegger/nvim-dap'
   use {
@@ -71,7 +72,7 @@ require('packer').startup(function(use)
   end
 end)
 
-vim.cmd([[colorscheme catppuccin-macchiato]])
+vim.cmd([[colorscheme catppuccin-mocha]])
 
 require("mason").setup()
 require("mason-lspconfig").setup({

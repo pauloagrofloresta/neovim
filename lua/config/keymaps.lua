@@ -25,6 +25,21 @@ function M.setup()
   vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, { desc = 'Ações de código' })
   vim.keymap.set('n', '<Leader>db', vim.diagnostic.goto_prev, { desc = 'Ir para diagnóstico anterior' })
   vim.keymap.set('n', '<Leader>dp', vim.diagnostic.goto_next, { desc = 'Ir para próximo diagnóstico' })
+
+  vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>', { silent = true, desc = 'Próxima aba' })
+  vim.keymap.set('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', { silent = true, desc = 'Aba anterior' })
+  vim.keymap.set('n', '<Leader>x', ':bdelete<CR>', { silent = true, desc = 'Fechar aba atual' })
+  vim.keymap.set('n', '<Leader>X', ':BufferLineCloseOthers<CR>', { silent = true, desc = 'Fechar outras abas' })
+  vim.keymap.set('n', '<Leader>1', ':BufferLineGoToBuffer 1<CR>', { silent = true, desc = 'Ir para aba 1' })
+  vim.keymap.set('n', '<Leader>2', ':BufferLineGoToBuffer 2<CR>', { silent = true, desc = 'Ir para aba 2' })
+  vim.keymap.set('n', '<Leader>3', ':BufferLineGoToBuffer 3<CR>', { silent = true, desc = 'Ir para aba 3' })
+  vim.keymap.set('n', '<Leader>4', ':BufferLineGoToBuffer 4<CR>', { silent = true, desc = 'Ir para aba 4' })
+  vim.keymap.set('n', '<Leader>5', ':BufferLineGoToBuffer 5<CR>', { silent = true, desc = 'Ir para aba 5' })
+  vim.keymap.set('n', '<Leader>6', ':BufferLineGoToBuffer 6<CR>', { silent = true, desc = 'Ir para aba 6' })
+  vim.keymap.set('n', '<Leader>7', ':BufferLineGoToBuffer 7<CR>', { silent = true, desc = 'Ir para aba 7' })
+  vim.keymap.set('n', '<Leader>8', ':BufferLineGoToBuffer 8<CR>', { silent = true, desc = 'Ir para aba 8' })
+  vim.keymap.set('n', '<Leader>9', ':BufferLineGoToBuffer 9<CR>', { silent = true, desc = 'Ir para aba 9' })
+  vim.keymap.set('n', '<Leader>$', ':BufferLineGoToBuffer -1<CR>', { silent = true, desc = 'Ir para última aba' })
 end
 
 return M
