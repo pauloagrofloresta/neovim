@@ -23,6 +23,10 @@ function M.setup()
   -- LSP e autocompletion
   require('config.setups.lsp').setup()
   require('config.setups.cmp').setup()
+  require('config.setups.todo-comments').setup()
+
+  require("telescope").load_extension("todo-comments")
+  require("fzf-lua.providers.grep")
 end
 
 return M

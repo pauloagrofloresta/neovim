@@ -48,7 +48,6 @@ require('packer').startup(function(use)
   use("petertriho/nvim-scrollbar")
   use("maxandron/goplements.nvim")
   use("crusj/hierarchy-tree-go.nvim")
-  use("mrcjkb/rustaceanvim")
   use("numToStr/Comment.nvim")
   use("FabijanZulj/blame.nvim")
   use("nvim-telescope/telescope.nvim")
@@ -65,18 +64,9 @@ require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
   use 'MunifTanjim/nui.nvim'
   use 'MeanderingProgrammer/render-markdown.nvim'
-  -- use 'zbirenbaum/copilot.lua'
-  -- use 'olimorris/codecompanion.nvim'
-
-  use {
-    "ravitemer/mcphub.nvim",
-    run = "npm install -g mcp-hub@latest",
-    config = function()
-      require("mcphub").setup({})
-    end
-  }
-
+  use "folke/todo-comments.nvim"
   use "vim-test/vim-test"
+  use "ibhagwan/fzf-lua"
 
   if packer_bootstrap then
     require('packer').sync()
@@ -125,7 +115,8 @@ for _, server in ipairs(servers) do
   }
 end
 
-
+-- TODO: hello world
+require('config.setups').setup()
 require('config.settings').setup()
 require('config.keymaps').setup()
 require('config.basics').setup()
