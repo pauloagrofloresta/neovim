@@ -67,13 +67,25 @@ require('packer').startup(function(use)
   use "folke/todo-comments.nvim"
   use "vim-test/vim-test"
   use "ibhagwan/fzf-lua"
+  use "folke/tokyonight.nvim"
+
+  use {
+    'Maduki-tech/nvim-plantuml',
+    config = function()
+        require('plantuml').setup({
+            output_dir = '/tmp',
+            viewer = 'open',
+            auto_refresh = true,
+        })
+    end
+  }
 
   if packer_bootstrap then
     require('packer').sync()
   end
 end)
 
-vim.cmd([[colorscheme catppuccin-mocha]])
+vim.cmd([[colorscheme tokyonight]])
 
 require("mason").setup()
 require("mason-lspconfig").setup({

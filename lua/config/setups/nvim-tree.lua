@@ -66,7 +66,7 @@ function M.setup()
         enable = true,
       },
       icons = {
-        padding = "",
+        padding = " ",
         show = {
           file = true,
           folder = false,
